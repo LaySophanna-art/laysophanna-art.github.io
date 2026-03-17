@@ -6,70 +6,213 @@
     <title>Document</title>
     <style>
         body {
+            padding: 0;
             margin: 0;
             box-sizing: border-box;
-            padding: 0;
+            background-color: lightgray;
+        }
+
+        .container {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 0px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .title-card {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+        }
+
+        .title-card p {
+            font-size: smaller;
+            color: gray;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        
+
+        .started {
+            background-color: white;
+            color: dodgerblue;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .nav {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            color:gray;
+            font-weight: bold;
+            font-size: small;
+        }
+
+        .started {
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(36, 97, 239);
+            color:white;
+            font-weight: bold;
+            font-size: small;
+            padding: 9px;
+        }
+
+        .main-container {
+            display: flex;
             align-items: center;
             justify-content: center;
-            background-color: lightgray;
-            margin-top: 20px;
+            flex-direction: column;
         }
 
-        .English {
-            font-family: Khmer OS Siemreap;
+        form {
+            margin-top: 5%;
+            padding: 20px;
             background-color: white;
-            padding: 12px;
-            border-radius: 12px;
-            line-height: 40px;
-            width: 350px;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
         }
 
-        .Computer {
-            font-family: Khmer OS Siemreap;
-            background-color: white;
-            padding: 12px;
-            border-radius: 12px;
-            line-height: 40px;
-            width: 350px;
+        label {
+            font-weight: bold;
         }
 
-        .Time {
-            font-family: Khmer OS Siemreap;
+        .input {
+            width: 95%;
+            padding: 8px;
+            border-radius: 10px;
+            border-width: 1px;
+        }
+
+        select {
+            padding: 8px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        p {
+            margin-top: -12px;
+            color: gray;
+        }
+
+        .remember {
+            text-align: left;
+            font-size: small;
+            color: gray;
+            font-weight: lighter;
+        }
+
+        .forgot {
+            margin-left: 150px;
+            text-decoration: none;
+            color: rgb(36, 97, 239);
+            font-size: small;
+        }
+        
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 7px;
+            gap: 10px;
+            width: 100%;
+        }        
+
+        .login {
+            width: 45%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgb(36, 97, 239);
+            color: white;
+            font-weight: bold;
+            border-color: rgb(36, 97, 239);
+            border-width: 1px;
+        }
+
+        .register {
+            width: 45%;
+            padding: 10px;
+            border-radius: 10px;
+            border-width: 1px;
+            border-color: gray;
             background-color: white;
-            padding: 12px;
-            border-radius: 12px;
-            line-height: 40px;
-            width: 350px;
+            font-weight: bold;
+            color: gray;
+        }
+
+        .account {
+            text-align: center;
+        }
+
+        span {
+            color: gray;
+        }
+
+        .create {
+            color: purple;
         }
 
     </style>
 </head>
 <body>
-    <form>
-        <div class="English">
-            <label for="English">សូមបញ្ជូលកម្រិតភាសាអង់គ្លេសរបស់អ្នក...</label><br>
-            <input type="radio" id="English" name="English" placeholder="ល្អ"> ល្អ<br>
-            <input type="radio" id="English" name="English" placeholder="មធ្យម"> មធ្យម<br>
-            <input type="radio" id="English" name="English" placeholder="គួរសម"> គួរសម<br>
-        </div><br>
-
-        <div class="Computer">
-            <label for="Computer">តើអ្នកប្រើប្រាស់កុំព្យូទ័រយូរប៉ុណ្ណា?...</label><br>
-            <input type="radio" id="Computer" name="Computer" placeholder="1 ឆ្នាំ"> 1 ឆ្នាំ <br>
-            <input type="radio" id="Computer" name="Computer" placeholder="3 ឆ្នាំ">3 ឆ្នាំ <br>
-            <input type="radio" id="Computer" name="Computer" placeholder="5 ឆ្នាំ"> 5 ឆ្នាំ <br>
-            <input type="radio" id="Computer" name="Computer" placeholder="ផ្សេងៗ"> ផ្សេងៗ <br>
-        </div><br>
-        
-        <div class="Time">
-            <label for="Time">សម្រាប់ម៉ោងសិក្សា ចន្ទ-សុក្រ មាន 2 វេន</label><br>
-            <input type="radio" id="Time" name="Time" placeholder="9:30 - 10:30 នាទីយប់"> 9:30 - 10:30 នាទីយប់ <br>
-            <input type="radio" id="Time" name="Time" placeholder="10:40 - 11:40 នាទីយប់"> 10:40 - 11:40 នាទីយប់ <br>
-            <input type="radio" id="TIme" name="Time" placeholder="ផ្សេងៗ"> ផ្សេងៗ <br>
-            <p>Completed by: Lay SoPhanNa.</p>
+    <header>
+        <div class="container">
+            <div class="title-card">
+                <h2>Lay's Lab</h2>
+                <p>Research Center</p>
+            </div>
+            <nav class="navigation">
+                <a href="#" class="nav">Home</a>
+                <a href="#" class="nav">Courses</a>
+                <a href="#" class="nav">Resources</a>
+                <a href="#" class="started">Get Started</a>
+            </nav>
         </div>
-    </form>
+    </header>
+    
+    <main>
+        <div class="main-container">
+        <form accept="true">
+            <div class="body-card">
+            <h2>Sign into Lay's Lab</h2>
+            <p>Use your student account to access practice tasks and lessons.</p>
+        </div>
+            <label for="email">Email</label><br>
+            <input type="email" id="email" name="email" placeholder="yourname@school.edu" class="input"><br><br>
+
+            <label for="email">Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Your password..." class="input"><br><br>
+
+            <label for="Role">Role / Class</label><br>
+            <select id="Role" name="Role">
+                <option value="Student: Grade 11">Student: Grade 11</option>
+                <option value="Student: Beginner">Student: Beginner</option>
+                <option value="Student: Advanced">Student: Advanced</option>
+                <option value="Student: Teacher/Instructor">Student: Teacher/Instructor</option>
+            </select><br><br>
+            <div class="remember"> 
+                <label for="remember">Remember me</label>
+                <input type="checkbox" id="remember" name="remember">
+                <a href="#" class="forgot">Forgot password?</a><br>
+            </div><br>
+            <div class="buttons">
+                <button type="Submit" class="login">Login</button>
+                <button type="Reset" class="register">Register</button><br><br>
+            </div><br>
+            <div class="account">
+                <span>Don't have an account? </span><a href="#" class="create">Create one</a>
+            </div>
+        </form>
+        </div>
+    </main>
 </body>
 </html>
